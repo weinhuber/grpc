@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "org.prismmodelchecker";
+
+service BookStore {
+   rpc totalCartValue (stream Book) returns (Cart) {}
+}
+message Book {
+   string name = 1;
+   string author = 2;
+   int32 price = 3;
+}
+message Cart {
+   int32 books = 1;
+   int32 price = 2;
+}
