@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_package = "org.prismmodelchecker.proto";
+
+service BookStoreSearch {
+  rpc find (BookSearchInput) returns (Book) {}
+}
+message BookSearchInput {
+  string name = 1;
+  string author = 2;
+  string genre = 3;
+}
+message Book {
+  string name = 1;
+  string author = 2;
+  string genre = 3;
+  int32 price = 4;
+}
