@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "org.prismmodelchecker.proto";
+
+service Service1 {
+  rpc function1 (ClientInputStuff) returns (ServerOutputStuff) {}
+}
+
+message ClientInputStuff {
+  string text = 1;
+  string name = 2;
+}
+
+message ServerOutputStuff {
+  string message = 1;
+}
